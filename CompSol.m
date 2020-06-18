@@ -2,7 +2,7 @@ function Compsol(fc, fSec, fc0, epsC0, k1, f1)
 % Derivated parameters
 k2 = 5 * k1; % According to Richart et al (1928)
 fcc = fc0 + (k1 * f1); % Concrete strength in MPa including confinement
-epsCC = epsC0 * (1 + (5 * (f1 /fc0))); % Ultimate strain capacity of confined conrete
+epsCC = epsC0 * (1 + (k2 * (f1 /fc0))); % Ultimate strain capacity of confined conrete
 Ec = 5000 * sqrt(fc); % Initial modulus in MPa
 ESec = fcc / epsCC; % Secant modulus in MPa
 
